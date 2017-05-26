@@ -7,8 +7,6 @@ public class Main {
 	// method name must be main ( can be changed by configuration )
 	// arguments must be an array of Strings.
 	// final and synchronized can be added to the function.
-	
-	
 	public static final synchronized void main(String... args) {
 
 		Main myMain = new Main();
