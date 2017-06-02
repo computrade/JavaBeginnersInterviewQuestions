@@ -13,7 +13,7 @@ public class MyTestClassForGC {
 	
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("Inside the MyTestClassForGC.finalize method before it is being garabge collected.");
+		System.out.println("Inside the MyTestClassForGC.finalize method before it is being garbage collected.");
 		super.finalize();
 	}
 
