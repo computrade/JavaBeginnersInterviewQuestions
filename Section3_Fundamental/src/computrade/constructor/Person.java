@@ -19,6 +19,7 @@ public class Person {
 	}
 	
 	public  Person(String firstName) {
+		this();
 		System.out.println("Person one arg constructor");
 		this.firstName = firstName;
 		
@@ -26,16 +27,15 @@ public class Person {
 	}
 
 	public Person(String firstName, String lastName) {
+		this(firstName);
 		System.out.println("Person two arg constructor");
-		this.firstName = firstName;
 		this.lastName = lastName;
 	}	
 	
 
 	public Person(String firstName, String lastName, int id) {
+		this(firstName,lastName);
 		System.out.println("Person three arg constructor");
-		this.firstName = firstName;
-		this.lastName = lastName;
 		this.id = id;
 	}
 
@@ -48,7 +48,6 @@ public class Person {
 		builder.append(lastName);
 		builder.append(", id=");
 		builder.append(id);
-		builder.append("]");
 		return builder.toString();
 	}
 

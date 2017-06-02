@@ -12,10 +12,8 @@ public class Student extends Person {
 	}
 
 	public Student(String firstName, String lastName, int id, String degree) {
+		super(firstName,  lastName,  id);
 		System.out.println("Student four arg constructor");
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.id = id;
 		this.degree = degree;
 
 	}
