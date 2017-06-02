@@ -23,9 +23,8 @@ public class Main {
 	private void checkGCinAction(){
 		
 		MyTestClassForGC myTestClassForGC = new MyTestClassForGC();
-		myTestClassForGC.doingSomething();
-		
 		// After finishing this method the "myTestClassForGC" instance has no reference - it can be GC.
+		myTestClassForGC.doingSomething();
 		
 	}
 

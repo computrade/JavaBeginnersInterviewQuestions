@@ -2,15 +2,13 @@ package computrade.gc;
 
 public class MyTestClassForGC {
 	
-	
 	public MyTestClassForGC(){
 		System.out.println("MyTestClassForGC initialized");
 		
 	}
 	
-	
 	public void doingSomething()  {
-		System.out.println("running doingSomething method.");
+		System.out.println("MyTestClassForGC.doingSomething method.");
 	}
 	
 	@Override
