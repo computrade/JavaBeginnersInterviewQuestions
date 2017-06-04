@@ -6,12 +6,13 @@ public class ExceptionTest {
 	   public static void main(String args[]) {
 		   
 		   ExceptionTest exceptionTest = new ExceptionTest();
-		   
 		   try {
-			   exceptionTest.handleException();
+			exceptionTest.handleException();
 		   } catch (MyCustomException e) {
-			   e.printStackTrace();
+			   // TODO Auto-generated catch block
+			e.printStackTrace();
 		   }
+		   
 		   exceptionTest.handleRuntimeException();
 		   
 	     
@@ -22,10 +23,10 @@ public class ExceptionTest {
 		      try {
 		         System.out.println("Access name in element three :" + names[3]);
 		      }catch(ArrayIndexOutOfBoundsException e){
-		    	  throw new MyCustomException(e.getMessage());
+		    	  throw new MyCustomException("Coverting from un-checked to checked exception: " + e.getMessage());
 		      }finally {
-		    	 names = null;
-		         System.out.println("Clean of handleException up done! The finally statement is executed");
+		    	 names = null; // Helping the GC
+		         System.out.println("finally of handleException method done!");
 		      }
 		     
 	   }
@@ -36,10 +37,11 @@ public class ExceptionTest {
 		      try {
 		         System.out.println("Access name in element three :" + names[3]);
 		      }catch(ArrayIndexOutOfBoundsException e){
-		    	  throw new MyCustomRunTimeException(e.getMessage());
+		    	  throw new MyCustomRunTimeException("Coverting from "
+		    	  		+ "un-checked to another un-checked exception:"+ e.getMessage());
 		      }finally {
-		    	 names = null;
-		         System.out.println("Clean up of handleRuntimeException done! The finally statement is executed");
+		    	 names = null; // Helping the GC
+		         System.out.println("finally of handleRuntimeException done!\n");
 		      }
 		   
 	   }

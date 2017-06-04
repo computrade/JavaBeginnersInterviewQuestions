@@ -9,5 +9,6 @@ public class MyCustomRunTimeException extends RuntimeException{
 	MyCustomRunTimeException(String message){
 		super(message);
 	}
+	
 
 }

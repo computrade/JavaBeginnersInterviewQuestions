@@ -1,5 +1,8 @@
 package computrade.exceptions;
 
+/*
+ * Creating a checked exception.
+ */
 public class MyCustomException extends Exception{
 	
 	MyCustomException(){
@@ -10,5 +13,6 @@ public class MyCustomException extends Exception{
 		super(message);
 	}
 	
+
 
 }
