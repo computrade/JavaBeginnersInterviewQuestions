@@ -6,9 +6,9 @@ public class MainStart {
 		
 		AirConditionStart airConditionStart= new AirConditionStart();
 		System.out.println(airConditionStart);
-		airConditionStart.working=true;
-		airConditionStart.power=10;
-		airConditionStart.temp=23;
+		airConditionStart.setWorking(true);
+		airConditionStart.setPower(10);
+		airConditionStart.setTemp(23);
 		System.out.println(airConditionStart);
 		
 	}

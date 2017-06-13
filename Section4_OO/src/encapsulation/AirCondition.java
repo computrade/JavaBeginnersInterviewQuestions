@@ -16,7 +16,6 @@ public class AirCondition {
 	
 	public void setPower(int power) {
 		
-		
 		if(power<0 || power>20){
 			throw new IllegalArgumentException("power should be between 0 to 20.");
 		}

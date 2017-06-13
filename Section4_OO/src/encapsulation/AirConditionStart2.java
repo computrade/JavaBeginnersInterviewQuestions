@@ -1,18 +1,11 @@
 package encapsulation;
 
-public class AirConditionStart {
+public class AirConditionStart2 {
 
-	 private int power;
-	 private boolean working;
-	 private int temp;
+	private int power;
+	private boolean working;
+	private int temp;
 	
-	public int getPower() {
-		return power;
-	}
-
-	public void setPower(int power) {
-		this.power = power;
-	}
 
 	public boolean isWorking() {
 		return working;
@@ -22,19 +15,28 @@ public class AirConditionStart {
 		this.working = working;
 	}
 
+	public int getPower() {
+		return power;
+	}
+	
+	public void setPower(int power) {
+		this.power = power;
+		
+	}
+
 	public int getTemp() {
 		return temp;
 	}
 
 	public void setTemp(int temp) {
-		//set max of 30 temp
 		this.temp = temp;
-	}
 
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("AirConditionStart [power=");
+		builder.append("AirCondition [power=");
 		builder.append(power);
 		builder.append(", working=");
 		builder.append(working);
@@ -43,5 +45,5 @@ public class AirConditionStart {
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
 }

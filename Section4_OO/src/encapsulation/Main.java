@@ -6,7 +6,6 @@ public class Main {
 		
 		AirCondition airCondition= new AirCondition();
 		System.out.println(airCondition);
-		airCondition.setPower(10);
 		airCondition.setTemp(25);
 		System.out.println(airCondition);
 		
