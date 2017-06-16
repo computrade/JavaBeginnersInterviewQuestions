@@ -1,4 +1,4 @@
-package Inhertance.start;
+package inheritance.start;
 
 public class Red extends Color {
 	@Override

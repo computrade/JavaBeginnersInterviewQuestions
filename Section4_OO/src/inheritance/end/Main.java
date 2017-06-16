@@ -1,4 +1,4 @@
-package Inhertance.end;
+package inheritance.end;
 
 public class Main {
 	

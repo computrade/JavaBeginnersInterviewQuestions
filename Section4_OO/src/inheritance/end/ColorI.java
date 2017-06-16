@@ -1,4 +1,4 @@
-package Inhertance.start;
+package inheritance.end;
 
 public interface ColorI {
 	void fill();

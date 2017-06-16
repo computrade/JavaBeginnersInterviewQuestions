@@ -1,4 +1,4 @@
-package Inhertance.end;
+package inheritance.start;
 
 public class Color implements ColorI{
 	
