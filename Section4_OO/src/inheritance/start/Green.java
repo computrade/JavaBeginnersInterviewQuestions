@@ -3,8 +3,7 @@ package inheritance.start;
 public class Green extends Color {
 	
 	public Green(){
-		System.out.println("Printed from Green constructor");
-		
+		System.out.println("Printed from Green constructor");	
 	}
 	
 	@Override

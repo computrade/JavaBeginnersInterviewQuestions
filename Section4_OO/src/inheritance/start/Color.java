@@ -9,7 +9,7 @@ public class Color{
 	
 	public void fill() {
 		
-		System.out.println("Inside Blue::fill() method.");
+		System.out.println("Inside Color::fill() method.");
 		
 	}
 

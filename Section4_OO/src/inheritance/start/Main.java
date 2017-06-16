@@ -7,11 +7,14 @@ public class Main {
 		Color color = new Color();
 		color.fill();
 		
-		Color green = new Green();
+		Blue blue = new Blue();
+		blue.fill();
+		
+		Green green = new Green();
 		green.fill();
 		
-		Color blue = new Blue();
-		blue.fill();
+		Red red = new Red();
+		red.fill();
 
 	}
 
