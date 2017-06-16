@@ -6,9 +6,11 @@ public class MainStart2 {
 		
 		AirConditionStart airConditionStart= new AirConditionStart();
 		System.out.println(airConditionStart);
-		airConditionStart.setPower(15);
-		airConditionStart.setWorking(true);
-		airConditionStart.setTemp(23);
+		airConditionStart.setTemp(25);
+		System.out.println(airConditionStart);
+		airConditionStart.increaseTemp();
+		System.out.println(airConditionStart);
+		airConditionStart.decreaseTemp();
 		System.out.println(airConditionStart);
 	}
 	

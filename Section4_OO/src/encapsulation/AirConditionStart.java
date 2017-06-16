@@ -11,7 +11,11 @@ public class AirConditionStart {
 	}
 
 	public void setPower(int power) {
+		if(power<0 || power>20){
+			throw new IllegalArgumentException("power should be between 0 to 20.");
+		}
 		this.power = power;
+		this.working=true;
 	}
 
 	public boolean isWorking() {
@@ -27,8 +31,24 @@ public class AirConditionStart {
 	}
 
 	public void setTemp(int temp) {
-		//set max of 30 temp
+		if(temp<10 || temp>30){
+			throw new IllegalArgumentException("temp should be between 10 to 30.");
+		}
+	
+		if(power==0){
+			this.power=15;
+		}
+		this.working=true;
 		this.temp = temp;
+	}
+	
+	
+	public void increaseTemp() {
+		this.temp++;
+	}
+	
+	public void decreaseTemp() {
+		this.temp--;
 	}
 
 	@Override
