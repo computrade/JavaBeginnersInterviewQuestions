@@ -1,31 +1,16 @@
 package inheritance.start;
 
-public class Color implements ColorI{
-	
-	public int num = 1;
+public class Color{
 	
 	public Color(){
-		System.out.println("Printed from Color const. num is:"  + num);
+		System.out.println("Printed from Color constructor" );
 	}
 
-	@Override
+	
 	public void fill() {
 		
-		System.out.println("Printed from Color");
+		System.out.println("Inside Blue::fill() method.");
 		
 	}
-	
-	public static void myStaticMethod() {
-		
-		System.out.println("Printed from Color.myStaticMethod");
-		
-	}
-	
-	public final void myFinalMethod() {
-		
-		System.out.println("Printed from Color.myFinalMethod");
-		
-	}
-	
 
 }

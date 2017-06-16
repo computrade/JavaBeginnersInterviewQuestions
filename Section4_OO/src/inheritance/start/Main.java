@@ -4,13 +4,15 @@ public class Main {
 	
 	public static void main(String [] args){
 		
-		Color color = new Green();
+		Color color = new Color();
 		color.fill();
 		
-		color = new Blue();
-		color.fill();
-		color.myStaticMethod();
-		color.myFinalMethod();
+		Color green = new Green();
+		green.fill();
+		
+		Color blue = new Blue();
+		blue.fill();
+
 	}
 
 }

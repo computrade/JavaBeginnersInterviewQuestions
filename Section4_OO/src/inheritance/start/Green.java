@@ -2,12 +2,10 @@ package inheritance.start;
 
 public class Green extends Color {
 	
-	public int num = 2;
 	public Green(){
-		System.out.println("Printed from Green const. num is:" + num);
+		System.out.println("Printed from Green constructor");
 		
 	}
-	
 	
 	@Override
 	public void fill() {
