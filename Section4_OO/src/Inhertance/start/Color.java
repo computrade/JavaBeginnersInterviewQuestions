@@ -1,4 +1,4 @@
-package Inhertance;
+package Inhertance.start;
 
 public class Color implements ColorI{
 	
@@ -15,6 +15,17 @@ public class Color implements ColorI{
 		
 	}
 	
+	public static void myStaticMethod() {
+		
+		System.out.println("Printed from Color.myStaticMethod");
+		
+	}
+	
+	public final void myFinalMethod() {
+		
+		System.out.println("Printed from Color.myFinalMethod");
+		
+	}
 	
 
 }

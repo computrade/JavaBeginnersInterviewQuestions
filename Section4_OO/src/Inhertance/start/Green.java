@@ -1,4 +1,4 @@
-package Inhertance;
+package Inhertance.start;
 
 public class Green extends Color {
 	
