@@ -4,18 +4,23 @@ public class Main {
 	
 	public static void main(String [] args){
 		
-		Color color = new Color();
-		color.fill();
-		
-		Blue blue = new Blue();
+		//Color color = new Color();
+		//color.fill();
+	
+		Color blue = new Blue();
 		blue.fill();
 		
-		Green green = new Green();
+		
+		Color green = new Green();
 		green.fill();
 		
-		Red red = new Red();
+		
+		Color red = new Red();
 		red.fill();
-
+		
+			
 	}
+	
+
 
 }
