@@ -10,4 +10,5 @@ public class Red extends Color {
 	public void fill() {
 		System.out.println("Inside Red::fill() method.");
 	}
+	
 }

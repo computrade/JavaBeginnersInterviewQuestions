@@ -7,15 +7,17 @@ public class Main {
 		Color color = new Color();
 		color.fill();
 	
-		Color blue = new Blue();
+		ColorI blue = new Blue();
 		blue.fill();
+		blue.setCode("#0000FF");
 		
-		
-		Color green = new Green();
+		ColorI green = new Green();
 		green.fill();
+		green.setCode("#00FF00");
 		
-		Color red = new Red();
+		ColorI red = new Red();
 		red.fill();
+		red.setCode("#FF0000");
 				
 	}
 
