@@ -18,7 +18,8 @@ public class Main {
 		ColorI red = new Red();
 		red.fill();
 		red.setCode("#FF0000");
-				
+		red.setTransparency(100);
+			
 	}
 
 }
