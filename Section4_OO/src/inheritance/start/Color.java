@@ -25,8 +25,5 @@ public class Color implements ColorI{
 		this.transparency = transparency;
 		System.out.println("The setTransparency set to: " + transparency);
 	}
-	
-
-
-	
+		
 }
