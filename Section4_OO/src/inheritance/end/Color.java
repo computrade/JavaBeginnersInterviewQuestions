@@ -11,23 +11,19 @@ public class Color implements ColorI{
 	
 	@Override
 	public void fill() {
-		
-		System.out.println("Printed from Color");
-		
+		System.out.println("Inside Color::fill() method.");
 	}
 	
 	@Override
 	public void setCode(String code) {
 		this.code = code;
 		System.out.println("Inside Color::setCode() to:" + code);
-		
-		
 	}
 	
 	@Override
 	public void setTransparency(int transparency){
 		this.transparency = transparency;
-		System.out.println("The Transparency was set to: " + transparency);
+		System.out.println("The setTransparency set to: " + transparency);
 	}
 	
 	public static void myStaticMethod() {
@@ -36,11 +32,4 @@ public class Color implements ColorI{
 		
 	}
 	
-	public final void myFinalMethod() {
-		
-		System.out.println("Printed from Color.myFinalMethod");
-		
-	}
-	
-
 }
