@@ -6,20 +6,16 @@ public class Main {
 		
 		Color color = new Color();
 		color.fill();
-	
-		ColorI blue = new Blue();
+		
+		Color blue = new Blue();
 		blue.fill();
-		blue.setCode("#0000FF");
-		
-		ColorI green = new Green();
+	
+		Color green = new Green();
 		green.fill();
-		green.setCode("#00FF00");
-		
-		ColorI red = new Red();
+	
+		Color red = new Red();
 		red.fill();
-		red.setCode("#FF0000");
-		red.setTransparency(100);
-			
+		
 	}
 
 }

@@ -4,20 +4,18 @@ public class Main {
 	
 	public static void main(String [] args){
 		
-		Color color = new Color();
-		color.fill();
-		
-		ColorI blue = new Blue();
+	
+		Color blue = new Blue();
 		blue.fill();
-		blue.setCode("#0000FF");
+		blue.setCode();
 		
-		ColorI green = new Green();
+		Color green = new Green();
 		green.fill();
-		green.setCode("#00FF00");
+		green.setCode();
 		
-		ColorI red = new Red();
+		Color red = new Red();
 		red.fill();
-		red.setCode("#FF0000");
+		red.setCode();
 		red.setTransparency(100);
 		//red.myStaticMethod();
 

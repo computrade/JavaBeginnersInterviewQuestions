@@ -1,6 +1,6 @@
 package inheritance.end;
 
-public class Color implements ColorI{
+public abstract class Color implements ColorI{
 	
 	private String code;
 	private int transparency;
@@ -13,6 +13,8 @@ public class Color implements ColorI{
 	public void fill() {
 		System.out.println("Inside Color::fill() method.");
 	}
+	
+	abstract void setCode();
 	
 	@Override
 	public void setCode(String code) {

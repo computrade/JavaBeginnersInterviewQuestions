@@ -11,9 +11,9 @@ public class Blue extends Color {
 		System.out.println("Inside Blue::fill() method.");
 	}
 	
-	public static void myStaticMethod() {
-		
-		System.out.println("Printed from Blue.myStaticMethod");
+	@Override
+	void setCode() {
+		super.setCode("#0000FF");
 		
 	}
 	

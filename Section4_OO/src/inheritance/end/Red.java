@@ -25,4 +25,10 @@ public class Red extends Color {
 		
 	}
 	
+	@Override
+	void setCode() {
+		super.setCode("#FF0000");
+		
+	}
+	
 }
