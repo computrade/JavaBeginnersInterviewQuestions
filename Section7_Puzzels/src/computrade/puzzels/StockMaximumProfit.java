@@ -34,16 +34,8 @@ package computrade.puzzels;
  */
 public class StockMaximumProfit {
 
-	public static void main(String args[]) {
+	public static double findBestProfit(double stockPricesYesterday[]) {
 
-		System.out.println("Beft Profit is " + findBestProfit());
-
-	}
-
-	public static double findBestProfit() {
-
-		double stockPricesYesterday[] = { 100, 100.2, 99, 98, 97.1, 99, 96,
-				101.2, 102.3, 104.1, 103.2 };
 		double min_price = stockPricesYesterday[0];
 		double max_profit = 0.0;
 

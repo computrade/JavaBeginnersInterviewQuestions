@@ -50,17 +50,6 @@ public class ReverseString {
 	    return letter + reverse(stringToReverse, index-1);
 	}
 	
-	public static void main(String [] args){
-		
-		
-		ReverseString rs = new ReverseString();
-		
-		System.out.println("Revers Java: " + rs.reverseJava("ABCDE"));
-		System.out.println("Revers StringBuilder: " + rs.reverseStringBuilder("ABCDE"));
-		System.out.println("Revers Char: " + rs.reverseChar("ABCDE"));
-		System.out.println("Revers recursive: " + rs.reverseStringRecursive("ABCDE"));
-		
-	}
 	
 	
 

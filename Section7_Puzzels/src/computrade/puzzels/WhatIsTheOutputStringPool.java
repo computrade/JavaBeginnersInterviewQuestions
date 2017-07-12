@@ -1,16 +1,21 @@
 package computrade.puzzels;
 
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 public class WhatIsTheOutputStringPool {
 	
-	public static void main(String ... args){
+	@Test
+	public void test(){
 		
 		String str1 = "Abracadabra";
 		String str2 = "Abra" + "cadabra";
 		String str3 = new String("Abracadabra");
 		
-		System.out.println(str1==str2);
-		System.out.println(str1==str3);
-		System.out.println(str2==str3);
+		assertTrue(str1==str2);
+		assertFalse(str1==str3);
+		assertFalse(str2==str3);
+
 	}
 
 }
