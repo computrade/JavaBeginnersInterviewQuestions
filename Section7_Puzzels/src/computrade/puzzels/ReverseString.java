@@ -19,8 +19,26 @@ public class ReverseString {
 	    return dest.toString();
 	}
 	
-	// the most efficient - go only on half of the char.
+	// Reverse String using char array.
 	public String reverseChar(String input){
+		
+		int begin=0;
+	    char[] in = input.toCharArray();
+	    //creating the output char array.
+	    int len = input.length();
+	    char[] out = new char[len];
+	    
+	    //looping on the input from the end to the beginning
+	    for (int end=len-1; end >= 0; end--){
+	       out[begin] = in[end];
+	       begin++;
+	    }
+	    
+	    return new String(out);
+	}
+	
+	// the most efficient - go only on half of the char.
+	public String reverseCharEffective(String input){
 	    char[] in = input.toCharArray();
 	    int begin=0;
 	    int end=in.length-1;

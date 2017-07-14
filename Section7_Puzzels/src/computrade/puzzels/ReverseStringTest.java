@@ -57,6 +57,19 @@ public class ReverseStringTest {
 	}
 	
 	@Test
+	public void testReverseStringWithCharEffectivly() {
+
+		assertEquals("EDCBA",rs.reverseCharEffective("ABCDE"));
+		assertEquals("21ba",rs.reverseCharEffective("ab12"));
+		assertEquals("",rs.reverseCharEffective(""));
+		assertEquals("a",rs.reverseCharEffective("a"));
+		assertEquals("aaa",rs.reverseCharEffective("aaa"));
+		assertEquals("aba",rs.reverseCharEffective("aba"));
+		assertEquals("Bbbaa",rs.reverseCharEffective("aabbB"));
+	
+	}
+	
+	@Test
 	public void testReverseStringWithRecursion() {
 
 		assertEquals("EDCBA",rs.reverseStringRecursive("ABCDE"));
