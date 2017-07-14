@@ -2,6 +2,12 @@ package computrade.puzzels;
 
 public class ReverseString {
 	
+	// Using Java Api of StringBuilder object.
+	public  String reverseJava(String input){
+		return new StringBuilder(input).reverse().toString();
+	}
+	
+	// Iterate over the char array of String, using StringBuilder.
 	public String reverseStringBuilder(String source) {
 	    int i, len = source.length();
 	    StringBuilder dest = new StringBuilder(len);
@@ -13,14 +19,7 @@ public class ReverseString {
 	    return dest.toString();
 	}
 	
-	
-	public  String reverseJava(String input){
-		return new StringBuilder(input).reverse().toString();
-	}
-	
-	
-	
-	// the most efficeint - go only on half of the char.
+	// the most efficient - go only on half of the char.
 	public String reverseChar(String input){
 	    char[] in = input.toCharArray();
 	    int begin=0;
@@ -35,6 +34,8 @@ public class ReverseString {
 	    }
 	    return new String(in);
 	}
+	
+	
 	
 	public String  reverseStringRecursive(String input) {
 

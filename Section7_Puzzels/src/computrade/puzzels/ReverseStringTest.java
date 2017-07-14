@@ -16,28 +16,30 @@ public class ReverseStringTest {
 	}
 	
 	@Test
-	public void testReverseStringWithJava() {
+	public void testReverseStringWithJavaApi() {
 	
-		assertEquals("EDCBA",rs.reverseJava("ABCDE"));
+		assertEquals("CBA",rs.reverseJava("ABC"));
 		assertEquals("21ba",rs.reverseJava("ab12"));
+		assertEquals("",rs.reverseJava(""));
 		assertEquals("a",rs.reverseJava("a"));
 		assertEquals("aaa",rs.reverseJava("aaa"));
 		assertEquals("aba",rs.reverseJava("aba"));
-		assertEquals("bbbaa",rs.reverseJava("aabbb"));
+		assertEquals("Bbbaa",rs.reverseJava("aabbB"));
 	
 	}
 	
 	
 	@Test
-	public void testReverseStringWithBuilder() {
+	public void testReverseStringWithStringBuilder() {
 
 	
 		assertEquals("EDCBA",rs.reverseStringBuilder("ABCDE"));
 		assertEquals("21ba",rs.reverseStringBuilder("ab12"));
+		assertEquals("",rs.reverseStringBuilder(""));
 		assertEquals("a",rs.reverseStringBuilder("a"));
 		assertEquals("aaa",rs.reverseStringBuilder("aaa"));
 		assertEquals("aba",rs.reverseStringBuilder("aba"));
-		assertEquals("bbbaa",rs.reverseStringBuilder("aabbb"));
+		assertEquals("Bbbaa",rs.reverseStringBuilder("aabbB"));
 	
 	}
 	
@@ -46,10 +48,11 @@ public class ReverseStringTest {
 
 		assertEquals("EDCBA",rs.reverseChar("ABCDE"));
 		assertEquals("21ba",rs.reverseChar("ab12"));
+		assertEquals("",rs.reverseChar(""));
 		assertEquals("a",rs.reverseChar("a"));
 		assertEquals("aaa",rs.reverseChar("aaa"));
 		assertEquals("aba",rs.reverseChar("aba"));
-		assertEquals("bbbaa",rs.reverseChar("aabbb"));
+		assertEquals("Bbbaa",rs.reverseChar("aabbB"));
 	
 	}
 	
@@ -58,10 +61,11 @@ public class ReverseStringTest {
 
 		assertEquals("EDCBA",rs.reverseStringRecursive("ABCDE"));
 		assertEquals("21ba",rs.reverseStringRecursive("ab12"));
+		assertEquals("",rs.reverseStringRecursive(""));
 		assertEquals("a",rs.reverseStringRecursive("a"));
 		assertEquals("aaa",rs.reverseStringRecursive("aaa"));
 		assertEquals("aba",rs.reverseStringRecursive("aba"));
-		assertEquals("bbbaa",rs.reverseStringRecursive("aabbb"));
+		assertEquals("Bbbaa",rs.reverseStringRecursive("aabbB"));
 	}
 		
 }
