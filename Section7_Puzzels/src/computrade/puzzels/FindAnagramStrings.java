@@ -15,7 +15,7 @@ public class FindAnagramStrings {
 	 *  actually occurs in the second. 
 	 *  
 	 *  If it is possible to “checkoff” each character, then the two strings must be anagrams.
-	 *  Checking off a character will be accomplished by replacing it with the special value Null.
+	 *  Checking off a character will be accomplished by replacing it with '0'.
 	 *   	
 	 * Before starting:
 	 * 1. Checking the length,
