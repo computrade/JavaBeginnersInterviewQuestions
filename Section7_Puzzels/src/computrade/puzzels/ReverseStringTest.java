@@ -80,5 +80,17 @@ public class ReverseStringTest {
 		assertEquals("aba",rs.reverseStringRecursive("aba"));
 		assertEquals("Bbbaa",rs.reverseStringRecursive("aabbB"));
 	}
+	
+	@Test
+	public void reverseStringRecursiveSecond() {
+
+		assertEquals("EDCBA",rs.reverseStringRecursiveSecond("ABCDE"));
+		assertEquals("21ba",rs.reverseStringRecursiveSecond("ab12"));
+		assertEquals("",rs.reverseStringRecursiveSecond(""));
+		assertEquals("a",rs.reverseStringRecursiveSecond("a"));
+		assertEquals("aaa",rs.reverseStringRecursiveSecond("aaa"));
+		assertEquals("aba",rs.reverseStringRecursiveSecond("aba"));
+		assertEquals("Bbbaa",rs.reverseStringRecursiveSecond("aabbB"));
+	}
 		
 }

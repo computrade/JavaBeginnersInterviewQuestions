@@ -57,6 +57,9 @@ public class ReverseString {
 	
 	public String  reverseStringRecursive(String input) {
 
+		if(input.length()<=0){
+			return input;
+		}
 	   return reverse(input, input.length()-1);
 	}
 
@@ -64,9 +67,16 @@ public class ReverseString {
 	    if(index == 0){
 	        return stringToReverse.charAt(0) + "";
 	    }
-
+	    
 	    char letter = stringToReverse.charAt(index);
 	    return letter + reverse(stringToReverse, index-1);
+	}
+	
+	public String reverseStringRecursiveSecond(String s){
+	    if (s.length() == 0) 
+	         return s;
+
+	    return reverseStringRecursiveSecond(s.substring(1)) + s.charAt(0);
 	}
 	
 	
