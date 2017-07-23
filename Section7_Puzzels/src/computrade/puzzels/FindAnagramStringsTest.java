@@ -8,46 +8,118 @@ public class FindAnagramStringsTest {
 	 * JUnit test class to test various anagram program for various String
 	 * input.
 	 */
+	
+	@Test
+	public void testFindAnagramByCheckingOff() {
+	
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("word", "wrdo"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("mary", "army"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("stop", "tops"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("listen", "silent"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("listen", "SILENT"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("a", "a"));
+		assertTrue(FindAnagramStrings.isAnagramByCheckingOff("", ""));
+		
+		assertFalse(FindAnagramStrings.isAnagramByCheckingOff("pure", "purr"));
+		assertFalse(FindAnagramStrings.isAnagramByCheckingOff("fill", "fil"));
+		assertFalse(FindAnagramStrings.isAnagramByCheckingOff("b", "bbb"));
+		assertFalse(FindAnagramStrings.isAnagramByCheckingOff("ccc", "ccccccc"));
+		assertFalse(FindAnagramStrings.isAnagramByCheckingOff("sleep", "slep"));
+		
+		try {
+			FindAnagramStrings.isAnagramByCheckingOff(null, null);
+		    fail("expected IllegalArgumentException exception was not occured.");
+		} catch(IllegalArgumentException e) {
+		        //if execution reaches here, 
+		        //it indicates this exception was occured.
+		        //so we need not handle it.
+		}
+
+
+	}
+	
+	
+	@Test
+	public void testFindAnagramBySort() {
+	
+		assertTrue(FindAnagramStrings.isAnagramBySort("word", "wrdo"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("mary", "army"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("stop", "tops"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("listen", "silent"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("listen", "SILENT"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("a", "a"));
+		assertTrue(FindAnagramStrings.isAnagramBySort("", ""));
+		
+		assertFalse(FindAnagramStrings.isAnagramBySort("pure", "purr"));
+		assertFalse(FindAnagramStrings.isAnagramBySort("fill", "fil"));
+		assertFalse(FindAnagramStrings.isAnagramBySort("b", "bbb"));
+		assertFalse(FindAnagramStrings.isAnagramBySort("ccc", "ccccccc"));
+		assertFalse(FindAnagramStrings.isAnagramBySort("sleep", "slep"));
+		
+		try {
+			FindAnagramStrings.isAnagramBySort(null, null);
+		    fail("expected IllegalArgumentException exception was not occured.");
+		} catch(IllegalArgumentException e) {
+		        //if execution reaches here, 
+		        //it indicates this exception was occured.
+		        //so we need not handle it.
+		}
+
+
+	}
 
 	@Test
-	public void testIsAnagram() {
+	public void testFindAnagramBySubstring() {
 
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("word", "wrdo"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("mary", "army"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("stop", "tops"));
-		assertTrue(FindAnagramStrings.isAnagramBySubstring("boat", "btoa"));
-		assertFalse(FindAnagramStrings.isAnagramBySubstring("pure", "in"));
+		assertTrue(FindAnagramStrings.isAnagramBySubstring("listen", "silent"));
+		assertTrue(FindAnagramStrings.isAnagramBySubstring("a", "a"));
+		assertTrue(FindAnagramStrings.isAnagramBySubstring("", ""));
+		
+		assertFalse(FindAnagramStrings.isAnagramBySubstring("pure", "purr"));
 		assertFalse(FindAnagramStrings.isAnagramBySubstring("fill", "fil"));
 		assertFalse(FindAnagramStrings.isAnagramBySubstring("b", "bbb"));
 		assertFalse(FindAnagramStrings.isAnagramBySubstring("ccc", "ccccccc"));
-		assertTrue(FindAnagramStrings.isAnagramBySubstring("a", "a"));
 		assertFalse(FindAnagramStrings.isAnagramBySubstring("sleep", "slep"));
+		
+		try {
+			FindAnagramStrings.isAnagramBySubstring(null, null);
+		    fail("expected IllegalArgumentException exception was not occured.");
+		} catch(IllegalArgumentException e) {
+		        //if execution reaches here, 
+		        //it indicates this exception was occured.
+		        //so we need not handle it.
+		}
 
 	}
 
-	@Test
-	public void testFindAnagram() {
-		assertTrue(FindAnagramStrings.isAnagramBySort("word", "wrdo"));
-		assertTrue(FindAnagramStrings.isAnagramBySort("boat", "btoa"));
-		assertFalse(FindAnagramStrings.isAnagramBySort("pure", "in"));
-		assertFalse(FindAnagramStrings.isAnagramBySort("fill", "fil"));
-		assertTrue(FindAnagramStrings.isAnagramBySort("a", "a"));
-		assertFalse(FindAnagramStrings.isAnagramBySort("b", "bbb"));
-		assertFalse(FindAnagramStrings.isAnagramBySort("ccc", "ccccccc"));
-		assertFalse(FindAnagramStrings.isAnagramBySort("sleep", "slep"));
-
-	}
 
 	@Test
-	public void testcheckAnagram() {
+	public void testFindAnagramBySBDelete() {
+		
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("word", "wrdo"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("mary", "army"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("stop", "tops"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("listen", "silent"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("a", "a"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("", ""));
+		
+		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("pure", "purr"));
+		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("fill", "fil"));
 		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("b", "bbb"));
 		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("ccc", "ccccccc"));
-		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("a", "a"));
 		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("sleep", "slep"));
-		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("boat", "btoa"));
-		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("pure", "in"));
-		assertFalse(FindAnagramStrings.checkAnagramBySBDelete("fill", "fil"));
+		
+		try {
+			FindAnagramStrings.checkAnagramBySBDelete(null, null);
+		    fail("expected IllegalArgumentException exception was not occured.");
+		} catch(IllegalArgumentException e) {
+		        //if execution reaches here, 
+		        //it indicates this exception was occured.
+		        //so we need not handle it.
+		}
 
 	}
 }
