@@ -56,38 +56,7 @@ public class FindAnagramStrings {
 		return true;
 
 	}
-
 	
-		
-	/*
-	 * Find if two Strings are anagram by sorting the characters in both inputs and comparing them.
-	 * 
-	 * Before starting:
-	 * 1. Checking the length,
-	 * 2. Changing the input to lower case in order to ignore cases.
-	 *
-	 * @throws IllegalArgumentException if one of the inputs is null.
-	 * @return true, if both String are anagram
-	 * 
-	 */
-	public static boolean isAnagramBySort(String word, String anagram) {
-		
-		validateInput(word,anagram);
-		
-		if (word.length() != anagram.length()) {
-			return false;
-		}
-		word = word.toLowerCase();
-		anagram = anagram.toLowerCase();
-		
-		char[] charFromWord = word.toCharArray();
-		char[] charFromAnagram = anagram.toCharArray();
-		Arrays.sort(charFromWord);
-		Arrays.sort(charFromAnagram);
-
-		return Arrays.equals(charFromWord, charFromAnagram);
-	}
-
 	/*
 	 * Find if two Strings are anagram by iterating the char array and removing the char
 	 * from the anagram char array.
@@ -121,18 +90,9 @@ public class FindAnagramStrings {
 			}
 		}
 		return anagram.isEmpty();
-	
-
-	}
-
-	private static void validateInput(String word, String anagram) {
-		if(word == null || anagram == null){
-			throw new IllegalArgumentException("Input for anagram should not be null");
-		}
-
 	}
 	
-	
+
 	/*
 	 * Find if two Strings are anagram by iterating the char array and using StringBuilder deleteCharAt method 
 	 * for removing the char from the anagram StringBuffer.
@@ -144,8 +104,6 @@ public class FindAnagramStrings {
 	 * @throws IllegalArgumentException if one of the inputs is null.
 	 * @return true, if both String are anagram
 	 */
-
-	
 	public static boolean checkAnagramBySBDelete(String word, String anagram) {
 		
 		validateInput(word,anagram);
@@ -171,4 +129,43 @@ public class FindAnagramStrings {
 
 		return sbAnagram.length() == 0 ? true : false;
 	}
+		
+	/*
+	 * Find if two Strings are anagram by sorting the characters in both inputs and comparing them.
+	 * 
+	 * Before starting:
+	 * 1. Checking the length,
+	 * 2. Changing the input to lower case in order to ignore cases.
+	 *
+	 * @throws IllegalArgumentException if one of the inputs is null.
+	 * @return true, if both String are anagram
+	 * 
+	 */
+	public static boolean isAnagramBySort(String word, String anagram) {
+		
+		validateInput(word,anagram);
+		
+		if (word.length() != anagram.length()) {
+			return false;
+		}
+		word = word.toLowerCase();
+		anagram = anagram.toLowerCase();
+		
+		char[] charFromWord = word.toCharArray();
+		char[] charFromAnagram = anagram.toCharArray();
+		Arrays.sort(charFromWord);
+		Arrays.sort(charFromAnagram);
+
+		return Arrays.equals(charFromWord, charFromAnagram);
+	}
+
+	
+	private static void validateInput(String word, String anagram) {
+		if(word == null || anagram == null){
+			throw new IllegalArgumentException("Input for anagram should not be null");
+		}
+
+	}
+	
+	
 }
