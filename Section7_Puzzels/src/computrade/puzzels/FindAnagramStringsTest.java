@@ -75,6 +75,7 @@ public class FindAnagramStringsTest {
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("mary", "army"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("stop", "tops"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("listen", "silent"));
+		assertTrue(FindAnagramStrings.isAnagramBySubstring("listen", "SILENT"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("a", "a"));
 		assertTrue(FindAnagramStrings.isAnagramBySubstring("", ""));
 		
@@ -103,6 +104,7 @@ public class FindAnagramStringsTest {
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("mary", "army"));
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("stop", "tops"));
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("listen", "silent"));
+		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("listen", "SILENT"));
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("a", "a"));
 		assertTrue(FindAnagramStrings.checkAnagramBySBDelete("", ""));
 		
@@ -114,6 +116,34 @@ public class FindAnagramStringsTest {
 		
 		try {
 			FindAnagramStrings.checkAnagramBySBDelete(null, null);
+		    fail("expected IllegalArgumentException exception was not occured.");
+		} catch(IllegalArgumentException e) {
+		        //if execution reaches here, 
+		        //it indicates this exception was occured.
+		        //so we need not handle it.
+		}
+
+	}
+	
+	@Test
+	public void testIsAnagramByCountAndCompare() {
+		
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("word", "wrdo"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("mary", "army"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("stop", "tops"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("listen", "silent"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("listen", "SILENT"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("a", "a"));
+		assertTrue(FindAnagramStrings.isAnagramByCountAndCompare("", ""));
+		
+		assertFalse(FindAnagramStrings.isAnagramByCountAndCompare("pure", "purr"));
+		assertFalse(FindAnagramStrings.isAnagramByCountAndCompare("fill", "fil"));
+		assertFalse(FindAnagramStrings.isAnagramByCountAndCompare("b", "bbb"));
+		assertFalse(FindAnagramStrings.isAnagramByCountAndCompare("ccc", "ccccccc"));
+		assertFalse(FindAnagramStrings.isAnagramByCountAndCompare("sleep", "slep"));
+		
+		try {
+			FindAnagramStrings.isAnagramByCountAndCompare(null, null);
 		    fail("expected IllegalArgumentException exception was not occured.");
 		} catch(IllegalArgumentException e) {
 		        //if execution reaches here, 

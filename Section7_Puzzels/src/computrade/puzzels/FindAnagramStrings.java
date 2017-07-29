@@ -158,7 +158,63 @@ public class FindAnagramStrings {
 
 		return Arrays.equals(charFromWord, charFromAnagram);
 	}
+	
+	
+	/*
+	 * Find if two Strings are anagram by counting the number of times each character occurs.
+	 * Since there are 26 possible characters, we can use a list of 26 counters, one for each possible character.
+	 * Each time we see a particular character, we will increment the counter at that position.
+	 * In the end, if the two lists of counters are identical, the strings must be anagrams
+	 * 
+	 * Before starting:
+	 * 1. Checking the length,
+	 * 2. Changing the input to lower case in order to ignore cases.
+	 *
+	 * @throws IllegalArgumentException if one of the inputs is null.
+	 * @return true, if both String are anagram
+	 * 
+	 */
+	public static boolean isAnagramByCountAndCompare(String word, String anagram) {
+		
+		validateInput(word,anagram);
+		
+		if (word.length() != anagram.length()) {
+			return false;
+		}
+		
+		word = word.toLowerCase();
+		anagram = anagram.toLowerCase();
+		
+	    char[] wordChars = word.toCharArray();
+	    char[] anagramChars = anagram.toCharArray();
+		
+		//array of 26 int for each input
+	    int[] wordCount = new int[26];
+	    int[] anagramCount = new int[26];
+	    
+	    //count each character in the 'word' input
+	    for(int i=0;i<wordChars.length;i++){
+	    	int pos = wordChars[i]-'a';
+	    	wordCount[pos] = wordCount[pos]+1;
+	    }
 
+	    //count each character in the 'anagram' input
+	    for(int i=0;i<anagramChars.length;i++){
+	    	int pos = anagramChars[i]-'a';
+	    	anagramCount[pos] = anagramCount[pos]+1;
+	    }
+
+	    //compare the counters array
+	    for(int i=0;i<26;i++){
+	    	if(wordCount[i]!=anagramCount[i]){
+	    		return false;
+	    	}	
+	    }
+	    
+	    return true;
+	  
+
+	}
 	
 	private static void validateInput(String word, String anagram) {
 		if(word == null || anagram == null){
