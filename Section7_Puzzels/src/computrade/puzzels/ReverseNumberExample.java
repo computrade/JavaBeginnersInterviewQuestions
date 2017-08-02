@@ -7,6 +7,11 @@ public class ReverseNumberExample {
      * @return reverse of number
      */
     public static int reverse(int number){
+    	
+    	if(number<0){
+    		throw new IllegalArgumentException("Input should be positive number");
+    	}
+    	
         int reverse = 0;
         int remainder = 0;
         do{
