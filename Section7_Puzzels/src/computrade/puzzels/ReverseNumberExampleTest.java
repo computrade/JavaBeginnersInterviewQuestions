@@ -12,10 +12,10 @@ public class ReverseNumberExampleTest {
 	@Test
 	public void testReverseNumber() {
 		
-		assertEquals(1, ReverseNumberExample.reverse(1));
-		assertEquals(21, ReverseNumberExample.reverse(12));
 		assertEquals(321, ReverseNumberExample.reverse(123));
-		assertEquals(111, ReverseNumberExample.reverse(111));
+		assertEquals(1, ReverseNumberExample.reverse(1));
+		assertEquals(54, ReverseNumberExample.reverse(45));
+		assertEquals(888, ReverseNumberExample.reverse(888));
 		
 		try {
 			ReverseNumberExample.reverse(-123);
