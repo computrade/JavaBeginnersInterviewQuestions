@@ -6,15 +6,19 @@ public class Connection{
 		System.out.println("Connection opened");
 	}
 	
-	void send(String input) throws ConnectionException{
+	void send(String input){
 		System.out.println("Activating connection Send...");
 		//This might throw ConnectionException.
-		throw new ConnectionException("problem in sending a message:" + input);
-		//System.out.println("After connection Send...");
+		runSend(input);
+		System.out.println("After connection Send...");
 	}
 	
 	void close(){
 		System.out.println("Connection closed");
+	}
+	
+	private void runSend(String input) {
+		throw new ConnectionException("problem in sending a message: " + input);
 	}
 	
 }

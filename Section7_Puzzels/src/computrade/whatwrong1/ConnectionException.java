@@ -1,7 +1,7 @@
 package computrade.whatwrong1;
 
 @SuppressWarnings("serial")
-public class ConnectionException extends Exception{
+public class ConnectionException extends RuntimeException{
 
 	ConnectionException(){
 		super();

@@ -1,6 +1,6 @@
 package computrade.whatwrong1;
 
-public class WhatWrong3 {
+public class WhatWrong1 {
 	
 	public static void main(String [] args){
 		
@@ -18,10 +18,8 @@ public class WhatWrong3 {
 			connection.send(input);
 			
 			connection.close();
-			
-			
+				
 		}catch(Exception e){
-			
 			
 		}
 		

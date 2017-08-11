@@ -1,6 +1,6 @@
 package computrade.whatwrong1;
 
-public class WhatWrong3Answer {
+public class WhatWrong1Answer {
 	
 	public static void main(String [] args){
 		
@@ -15,17 +15,18 @@ public class WhatWrong3Answer {
 		try{
 			String input="Hello World";
 			connection.send(input);
-		// it better to catch the specific Excpetion.	
-		}catch(ConnectionException e){
+		 
+		}catch(ConnectionException connectionEx){  //catch the specific Excpetion.	
 			// You should provide good logging for the support team. 
-			System.out.println("Handling connection Exception. " + e.getMessage());
-			
-		}finally{
+			System.out.println("Handling connection Exception: " + connectionEx.getMessage());
+		}catch(Exception ex){
+			System.out.println("Un-known Exception happen: " + ex.getMessage());
+		}
+		finally{
 			// the close of the connection should be in a finally block.
 			if(connection!=null){
 				connection.close();
-			}
-			
+			}	
 		}
 		
 	}
