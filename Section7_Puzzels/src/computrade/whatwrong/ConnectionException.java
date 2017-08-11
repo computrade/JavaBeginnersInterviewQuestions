@@ -1,4 +1,4 @@
-package computrade.lesson35;
+package computrade.whatwrong;
 
 @SuppressWarnings("serial")
 public class ConnectionException extends Exception{

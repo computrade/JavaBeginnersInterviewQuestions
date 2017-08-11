@@ -1,4 +1,4 @@
-package computrade.lesson35;
+package computrade.whatwrong;
 
 public class Connection{
 	
