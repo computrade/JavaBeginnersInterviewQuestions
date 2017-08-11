@@ -1,4 +1,4 @@
-package computrade.whatwrong1;
+package computrade.whatwrong2;
 
 public class Dog extends Animal {
 	
