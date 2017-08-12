@@ -9,8 +9,7 @@ public class WhatWrong1 {
 	
 	private static void handleConnection(){
 		
-		try{
-			
+		try{	
 			Connection connection = new Connection();
 			connection.open();
 			
@@ -21,10 +20,8 @@ public class WhatWrong1 {
 				
 		}catch(Exception e){
 			
-		}
-		
+		}	
 	}
-	
 }
 
 
